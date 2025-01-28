@@ -11,11 +11,12 @@ html,body{
 
 button{
     padding: .2em .6em;
-    width: 8em;
-    height: 2em;
+    width: 10rem;
+    height: 2.5em;
     background-color: transparent;
     border: 2px solid black;
     border-radius: 5px;
+    font-size: 1.2rem;
 }
 
 button:hover{
@@ -30,7 +31,7 @@ button:hover{
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     justify-content: center;
     align-items: center;
 }
@@ -38,56 +39,17 @@ button:hover{
 .display-area{
     width: 90%;
     height: 60%;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
     border-radius: .5em;
-    background-color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#list-view{
-    width: 90%;
-    height: 35%;
-    border: 1px solid black;
-    background-color:beige;
-    border-radius: .5em;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 2em;
-    overflow: auto;
-}
-
-#list-view p{
-    display: block;
-    width: 100%
-}
-#note-page{
-    width: 70%;
-    height: 80%;
-    border: 5px solid grey;
-    border-radius: .5em;
+    /* background-color: aliceblue; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    border: 2px solid black;
 }
 
-#note-page .note-page-top{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid black;
-    padding: 0 3em;
-}
-
-
-
-#note-page .note-page-main{
+ .note-page-main{
     width: 90%;
     height: 80%;
     border: 2px solid black;
@@ -97,7 +59,7 @@ button:hover{
     align-items: center;
 }
 
-#note-page .note-page-main textarea{
+.note-page-main textarea{
     width: 100%;
     height: 100%;
     background-color: aliceblue;
@@ -105,21 +67,62 @@ button:hover{
     font-size: 1.5em;
 }
 
-#note-page .note-page-footer{
-    width: 100%;
+.note-page-footer{
+    width: 90%;
     height: 10%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border-radius: .5em;
-    padding: 0 22em;
+    /* padding: 0 22em; */
 }
 
-#list-view .list-view-item{
+.note-page-footer #sort-notes{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 12rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+#sort-notes select{
+    border: none;
+    padding: .5rem;
+    margin-left: .5rem;
+    background-color: transparent;
+    font-size: .9rem;
+    
+}
+
+#list-view{
+    width: 90%;
+    height: 35%;
+    outline: 2px solid black;
+    /* background-color: blue; */
+    border-radius: .5em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    /* padding: 0 2em; */
+    overflow: auto;
+}
+
+#list-view p{
+    display: block;
     width: 100%;
-    height: auto;
-    /* border: .1px solid black; */
+    
+}
+
+
+#list-view .list-view-item{
+    width: 95%;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -129,7 +132,7 @@ button:hover{
 }
 
 #list-view .list-view-item:hover{
-    background: black;
+    background: rgb(134, 242, 169);
     color: white;
     border: .1px solid white;
 }
@@ -145,37 +148,14 @@ button:hover{
     /* background-color: antiquewhite; */
     
 }
-.item-edit-btns{
-    display:flex;
-    width: 15%;
-    margin: .2em 0;
-    justify-content: space-evenly;
+
+.edit-btn{
+    /* background-color: red; */
+    width: auto;
+    height: auto;
+    padding: .2rem .5rem;
+    border: 1px solid black;
+    display: flex;
     align-items: center;
-}
-
-.item-edit-btns button{
-    width: 4em;
-    height: 2em;
-    background-color: transparent;
-    border: 2px solid black;
-    border-radius: 5px;
-}
-.item-edit-btns button:hover{
-    background-color: black;
-    color: white;
-    border: 2px solid white;
-}
-
-.item-edits button{
-    margin: 0 .5em;
-}
-
-.list-view-item:hover .item-edit-btns button{
-    background-color: white;
-    color: black;
-    border: .1px solid white;
-}
-
-.selected-item{
-    background-color: white;
+    justify-content: center;
 }

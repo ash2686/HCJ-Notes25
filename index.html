@@ -8,42 +8,48 @@
 </head>
 <body>
         <div class="main-area">
+            
             <div class="display-area">
-                <div id="note-page">
-                    <div class="note-page-top">
-                        <div id="new-note-item">
-                            <button id="new-note" onClick="newNote()">New</button>
-                        </div>
-
-                        <div class="notes-other-buttons">
-                            <button id="edit-note" onClick="editItem()" >Edit</button>
-                            <button id="close-note" onClick="delItem()">x</button>
-                        </div>
-                    </div>
-
-                    <div class="note-page-main">
+               
+                  <div class="note-page-main">
                         <textarea name="note" id="enter-note" placeholder="Enter your new Note here..."></textarea>
                     </div>
                     
                     <div class="note-page-footer">
-                    <button value="Submit" id="save-note" onClick="saveNote()">Save</button>
-                    <button id="clearNotes" onClick="clearNotes()">Clear Notes</button>
+                            <button value="Submit" id="save-note" onClick="saveNote()">Save</button>
+                            <button value="Submit" id="edit-note" onClick="editNote()">Edit</button>
+                            <button id="clearArea" onClick="clearArea()">Clear Notes</button>
+                            <div id="sort-notes">
+                                <label for="sortNotes">Sort</label>
+                                <select id="sortNotes" name="sort">
+                                    <option>Alphabetically</option>
+                                    <option>Date Created</option>
+                                    <option>No Sorting</option>
+                                </select>
+
+                            </div>
+                            
                     </div>
-                </div>
+                
               
             </div>
+               
+            <!-- End of text area, start of list of notes -->
 
-            <div id="list-view">
 
-                <div class="list-view-item list-view-id">
-                    <!-- <p class="list-item-para">Demo note is already created.</p>
-                    <div class="item-edit-btns">
-                        <button class="edit-btns" onClick="editItem()">Edit</button>
-                        <button class="edit-btns" onClick="delItem()">x</button>
-                    </div>                  
-                </div> -->
+                        <div id="list-view">
 
-            </div>
+                            <!-- <div class="list-view-item list-view-id"> -->
+                                <!-- <p class="list-item-para">Demo note is already created.</p>
+                                <div class="item-edit-btns">
+                                    <button class="edit-btns" onClick="editItem()">Edit</button>
+                                    <button class="edit-btns" onClick="delItem()">x</button>
+                                </div>                  
+                            </div> -->
+
+                            <!-- </div> -->
+
+                        </div>
 
         </div>
     
