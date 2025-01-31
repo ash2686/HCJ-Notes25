@@ -111,6 +111,8 @@ button:hover{
     flex-direction: column;
     /* padding: 0 2em; */
     overflow: auto;
+    background-color: aliceblue;
+    counter-reset: note;
 }
 
 #list-view p{
@@ -126,15 +128,24 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2em;
-    margin: .5em 0;
+    padding: .5rem 2em;
+    margin: .5rem 0;
     border-radius: 5px;
 }
 
+.list-view-item::before{
+    counter-increment: note;
+    content: counter(note) ").  " ;
+    margin-right: .5rem;
+    font-size: 1.2rem;
+    vertical-align: baseline;
+    padding: .5rem 0;
+}
+
 #list-view .list-view-item:hover{
-    background: rgb(134, 242, 169);
-    color: white;
-    border: .1px solid white;
+    background: rgb(215, 218, 216);
+    color: black;
+    border: .1px solid rgb(159, 156, 156);
 }
 
 /* #list-view .list-view-item:active{
@@ -149,7 +160,7 @@ button:hover{
     
 }
 
-.edit-btn{
+.del-btn{
     /* background-color: red; */
     width: auto;
     height: auto;
